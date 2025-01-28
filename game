@@ -1,254 +1,201 @@
-import pygame
-import random
-import sys
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNESCO Competency Framework Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+        }
+        h2 {
+            color: #007BFF;
+            margin-top: 30px;
+        }
+        .question {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-weight: bold;
+            color: #555;
+        }
+        .answer {
+            margin-top: 10px;
+            color: #444;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>UNESCO Competency Framework Guide</h1>
 
-# Initialize PyGame
-pygame.init()
+    <!-- Question 1 -->
+    <div class="question">
+        <h2>1. Overview and Key Components</h2>
+        <p>Provide a detailed breakdown of UNESCO’s Competency Framework for Teachers and Students. What are the core competencies outlined for teachers, and how do they align with those for students?</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> UNESCO’s Competency Framework emphasizes four key domains for both teachers and students: <strong>Knowledge and Understanding</strong>, <strong>Skills</strong>, <strong>Attitudes and Values</strong>, and <strong>Application and Impact</strong>. For teachers, the framework focuses on pedagogical knowledge, inclusive teaching practices, and fostering global citizenship. For students, it emphasizes critical thinking, collaboration, and real-world problem-solving. The alignment lies in the shared goal of developing lifelong learners who contribute to sustainable development.</p>
+        </div>
+    </div>
 
-# Set up the game window
-WIDTH, HEIGHT = 800, 600
-window = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Quiz Challenge')
+    <!-- Question 2 -->
+    <div class="question">
+        <h2>2. Comparative Analysis</h2>
+        <p>Compare UNESCO’s Competency Framework with other global education frameworks, such as the OECD Learning Compass 2030. What are the similarities and differences in their approaches to teacher and student competencies?</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> Both UNESCO’s framework and the OECD Learning Compass 2030 emphasize <strong>21st-century skills</strong> like critical thinking, collaboration, and global citizenship. However, UNESCO places a stronger focus on <strong>cultural diversity</strong> and <strong>sustainability</strong>, while the OECD framework prioritizes <strong>adaptability</strong> and <strong>resilience</strong> in a rapidly changing world. Both frameworks advocate for student-centered learning but differ in their emphasis on specific competencies.</p>
+        </div>
+    </div>
 
-# Load images (ensure these images are in your working directory)
-student_img = pygame.image.load('student.png')
-student_img = pygame.transform.scale(student_img, (40, 40))
+    <!-- Question 3 -->
+    <div class="question">
+        <h2>3. Implementation Strategies</h2>
+        <p>What are the best practices for implementing UNESCO’s Competency Framework in a school or educational institution? Provide a step-by-step guide for administrators and educators.</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> Implementation steps include:
+                <ol>
+                    <li><strong>Conduct a needs assessment</strong> to identify gaps in current practices.</li>
+                    <li><strong>Train educators</strong> on the framework’s principles and competencies.</li>
+                    <li><strong>Integrate competencies</strong> into curricula and lesson plans.</li>
+                    <li><strong>Use assessment tools</strong> to measure progress and provide feedback.</li>
+                    <li><strong>Foster a culture of collaboration</strong> among teachers, students, and stakeholders.</li>
+                </ol>
+            </p>
+        </div>
+    </div>
 
-question_bubble_img = pygame.image.load('question_bubble.png')
-question_bubble_img = pygame.transform.scale(question_bubble_img, (40, 40))
+    <!-- Question 4 -->
+    <div class="question">
+        <h2>4. Technology Integration</h2>
+        <p>How can AI and digital tools be leveraged to support the development of competencies outlined in UNESCO’s framework for both teachers and students? Provide specific examples and use cases.</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> AI and digital tools can enhance competency development through:
+                <ul>
+                    <li><strong>Personalized learning platforms</strong> that adapt to individual student needs.</li>
+                    <li><strong>Collaborative tools</strong> like Google Workspace or Microsoft Teams for teamwork and communication.</li>
+                    <li><strong>AI-driven analytics</strong> to track student progress and provide targeted feedback.</li>
+                    <li><strong>Virtual reality (VR)</strong> for immersive learning experiences in global citizenship and sustainability.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
 
-book_of_knowledge_img = pygame.image.load('book_of_knowledge.png')
-book_of_knowledge_img = pygame.transform.scale(book_of_knowledge_img, (40, 40))
+    <!-- Question 5 -->
+    <div class="question">
+        <h2>5. Assessment and Evaluation</h2>
+        <p>Design a rubric or assessment tool to measure the progress of teachers and students in achieving the competencies outlined in UNESCO’s framework. What metrics and indicators should be included?</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> A rubric should include:
+                <ul>
+                    <li><strong>Knowledge and Understanding:</strong> Depth of subject knowledge and awareness of global issues.</li>
+                    <li><strong>Skills:</strong> Critical thinking, collaboration, and digital literacy.</li>
+                    <li><strong>Attitudes and Values:</strong> Respect for diversity and commitment to sustainability.</li>
+                    <li><strong>Application and Impact:</strong> Real-world problem-solving and community contributions.</li>
+                </ul>
+                Each domain can be scored on a 4-point scale (Emerging to Advanced).</p>
+        </div>
+    </div>
 
-# Define colors
-BLACK = (0, 0, 0)
-RETRO_GREEN = (0, 255, 0)
-RETRO_RED = (255, 0, 0)
-RETRO_YELLOW = (255, 255, 0)
-RETRO_BLUE = (0, 0, 255)
-WHITE = (255, 255, 255)
+    <!-- Question 6 -->
+    <div class="question">
+        <h2>6. Cultural Adaptation</h2>
+        <p>How can UNESCO’s Competency Framework be adapted to fit the cultural and socio-economic contexts of different regions or countries? Provide examples of successful adaptations.</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> Adaptation strategies include:
+                <ul>
+                    <li><strong>Localizing content</strong> to reflect cultural values and traditions.</li>
+                    <li><strong>Engaging local stakeholders</strong> in the implementation process.</li>
+                    <li><strong>Providing multilingual resources</strong> to ensure accessibility.</li>
+                    <li>Example: In Southeast Asia, UNESCO’s framework was adapted to emphasize <strong>community-based learning</strong> and <strong>indigenous knowledge systems</strong>.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
 
-# Set up fonts
-font = pygame.font.Font(None, 36)
-small_font = pygame.font.Font(None, 28)
+    <!-- Question 7 -->
+    <div class="question">
+        <h2>7. Professional Development for Teachers</h2>
+        <p>What training programs or professional development initiatives can help teachers acquire and enhance the competencies outlined in UNESCO’s framework? Include recommendations for both pre-service and in-service training.</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> Recommendations include:
+                <ul>
+                    <li><strong>Pre-service training:</strong> Integrate UNESCO’s competencies into teacher education programs.</li>
+                    <li><strong>In-service training:</strong> Offer workshops on inclusive teaching, global citizenship, and technology integration.</li>
+                    <li><strong>Online courses:</strong> Platforms like Coursera or edX can provide flexible learning opportunities.</li>
+                    <li><strong>Mentorship programs:</strong> Pair experienced teachers with newcomers to share best practices.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
 
-# Define player class
-class Player(pygame.sprite.Sprite):
-    def __init__(self):
-        super().__init__()
-        self.image = student_img
-        self.rect = self.image.get_rect()
-        self.rect.center = (WIDTH // 2, HEIGHT // 2)
-        self.speed = 5  # Adjust as needed for 'move quickly'
+    <!-- Question 8 -->
+    <div class="question">
+        <h2>8. Student-Centered Learning</h2>
+        <p>How does UNESCO’s Competency Framework promote student-centered learning? Discuss specific competencies that empower students to take ownership of their learning and develop critical thinking skills.</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> The framework promotes student-centered learning through:
+                <ul>
+                    <li><strong>Critical thinking:</strong> Encouraging students to analyze and evaluate information.</li>
+                    <li><strong>Collaboration:</strong> Fostering teamwork and communication skills.</li>
+                    <li><strong>Self-directed learning:</strong> Empowering students to set goals and manage their learning.</li>
+                    <li><strong>Real-world application:</strong> Connecting learning to practical, meaningful contexts.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
 
-    def update(self, keys_pressed):
-        if keys_pressed[pygame.K_LEFT]:
-            self.rect.x -= self.speed
-        if keys_pressed[pygame.K_RIGHT]:
-            self.rect.x += self.speed
-        if keys_pressed[pygame.K_UP]:
-            self.rect.y -= self.speed
-        if keys_pressed[pygame.K_DOWN]:
-            self.rect.y += self.speed
-        # Keep player on the screen
-        self.rect.clamp_ip(window.get_rect())
+    <!-- Question 9 -->
+    <div class="question">
+        <h2>9. Global Citizenship Education</h2>
+        <p>Analyze how UNESCO’s Competency Framework supports the development of global citizenship skills in students. What competencies are most relevant for fostering intercultural understanding and sustainable development?</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> Key competencies include:
+                <ul>
+                    <li><strong>Intercultural understanding:</strong> Respecting and valuing diverse perspectives.</li>
+                    <li><strong>Sustainability:</strong> Promoting environmental stewardship and ethical decision-making.</li>
+                    <li><strong>Global awareness:</strong> Understanding global issues and their local implications.</li>
+                    <li><strong>Empathy:</strong> Developing compassion and a sense of shared responsibility.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
 
-# Define QuestionBubble class
-class QuestionBubble(pygame.sprite.Sprite):
-    def __init__(self):
-        super().__init__()
-        self.image = question_bubble_img
-        self.rect = self.image.get_rect()
-        self.rect.x = random.randint(0, WIDTH - 40)
-        self.rect.y = random.randint(0, HEIGHT - 40)
-        self.vx = random.choice([-2, -1, 1, 2])
-        self.vy = random.choice([-2, -1, 1, 2])
+    <!-- Question 10 -->
+    <div class="question">
+        <h2>10. Challenges and Solutions</h2>
+        <p>What are the potential challenges in implementing UNESCO’s Competency Framework in diverse educational systems? Propose solutions to overcome these challenges, considering resource limitations and varying levels of teacher preparedness.</p>
+        <div class="answer">
+            <p><strong>Answer:</strong> Challenges and solutions include:
+                <ul>
+                    <li><strong>Resource limitations:</strong> Seek funding from governments, NGOs, or private sector partnerships.</li>
+                    <li><strong>Teacher preparedness:</strong> Provide targeted professional development and mentorship.</li>
+                    <li><strong>Cultural resistance:</strong> Engage local communities and adapt the framework to align with cultural values.</li>
+                    <li><strong>Assessment difficulties:</strong> Develop clear, culturally relevant assessment tools.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
 
-    def update(self):
-        self.rect.x += self.vx
-        self.rect.y += self.vy
-        # Bounce off the walls
-        if self.rect.left <= 0 or self.rect.right >= WIDTH:
-            self.vx *= -1
-        if self.rect.top <= 0 or self.rect.bottom >= HEIGHT:
-            self.vy *= -1
-
-# Define BookOfKnowledge class
-class BookOfKnowledge(pygame.sprite.Sprite):
-    def __init__(self):
-        super().__init__()
-        self.image = book_of_knowledge_img
-        self.rect = self.image.get_rect()
-        self.rect.x = random.randint(0, WIDTH - 40)
-        self.rect.y = random.randint(0, HEIGHT - 40)
-
-    def update(self):
-        pass  # The book doesn't move
-
-# Sample questions
-questions = [
-    {"question": "What is 5 + 7?", "answer": "12"},
-    {"question": "What is the capital of France?", "answer": "Paris"},
-    {"question": "What color do you get when you mix red and white?", "answer": "Pink"},
-    {"question": "Who wrote 'Hamlet'?", "answer": "Shakespeare"},
-    {"question": "What is the chemical symbol for water?", "answer": "H2O"},
-    # Add more questions as needed
-]
-
-# Game variables
-score = 0
-lives = 3
-max_score = 10  # Score needed to win
-game_over = False
-
-# Sprite groups
-all_sprites = pygame.sprite.Group()
-question_bubbles = pygame.sprite.Group()
-books_of_knowledge = pygame.sprite.Group()
-
-player = Player()
-all_sprites.add(player)
-
-# Spawn initial question bubbles
-for _ in range(5):
-    bubble = QuestionBubble()
-    all_sprites.add(bubble)
-    question_bubbles.add(bubble)
-
-# Timers
-book_spawn_time = pygame.time.get_ticks()
-book_interval = 15000  # Book appears every 15 seconds
-
-clock = pygame.time.Clock()
-
-# Game states
-INTRO = 'intro'
-PLAYING = 'playing'
-QUESTION = 'question'
-GAME_OVER = 'game_over'
-
-state = INTRO
-
-# Input buffer for answering questions
-input_text = ''
-
-# Main game loop
-running = True
-while running:
-    clock.tick(60)  # 60 FPS
-
-    keys_pressed = pygame.key.get_pressed()
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-        if state == INTRO:
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
-                    state = PLAYING
-        elif state == QUESTION:
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RETURN:
-                    # Check the answer
-                    if input_text.strip().lower() == current_question['answer'].lower():
-                        score += 1
-                    else:
-                        lives -= 1
-                    input_text = ''
-                    state = PLAYING
-                    if lives <= 0 or score >= max_score:
-                        state = GAME_OVER
-                elif event.key == pygame.K_BACKSPACE:
-                    input_text = input_text[:-1]
-                else:
-                    input_text += event.unicode
-        elif state == GAME_OVER:
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
-                    # Reset the game
-                    score = 0
-                    lives = 3
-                    # Reset player position
-                    player.rect.center = (WIDTH // 2, HEIGHT // 2)
-                    # Remove all question bubbles and books
-                    question_bubbles.empty()
-                    books_of_knowledge.empty()
-                    all_sprites.empty()
-                    all_sprites.add(player)
-                    # Spawn initial question bubbles
-                    for _ in range(5):
-                        bubble = QuestionBubble()
-                        all_sprites.add(bubble)
-                        question_bubbles.add(bubble)
-                    state = PLAYING
-
-    if state == PLAYING:
-        all_sprites.update(keys_pressed)
-        # Check for collisions with question bubbles
-        bubble_hit_list = pygame.sprite.spritecollide(player, question_bubbles, True)
-        for bubble in bubble_hit_list:
-            if questions:
-                current_question = random.choice(questions)
-                state = QUESTION
-            else:
-                # No questions left
-                state = GAME_OVER
-        # Check for collisions with books of knowledge
-        book_hit_list = pygame.sprite.spritecollide(player, books_of_knowledge, True)
-        for book in book_hit_list:
-            score += 2
-            lives += 1
-
-        # Spawn books of knowledge at intervals
-        if pygame.time.get_ticks() - book_spawn_time > book_interval:
-            book = BookOfKnowledge()
-            all_sprites.add(book)
-            books_of_knowledge.add(book)
-            book_spawn_time = pygame.time.get_ticks()
-
-    # Drawing
-    window.fill(BLACK)
-
-    if state == INTRO:
-        # Display instructions
-        intro_text1 = font.render("Welcome to Quiz Challenge!", True, RETRO_GREEN)
-        intro_text2 = small_font.render("Use the arrow keys to move.", True, WHITE)
-        intro_text3 = small_font.render("Collect question bubbles and answer questions.", True, WHITE)
-        intro_text4 = small_font.render("Collect the Book of Knowledge for extra points and lives.", True, WHITE)
-        intro_text5 = small_font.render("Press SPACE to start.", True, RETRO_YELLOW)
-        window.blit(intro_text1, (WIDTH//2 - intro_text1.get_width()//2, HEIGHT//2 - 100))
-        window.blit(intro_text2, (WIDTH//2 - intro_text2.get_width()//2, HEIGHT//2 - 50))
-        window.blit(intro_text3, (WIDTH//2 - intro_text3.get_width()//2, HEIGHT//2 - 20))
-        window.blit(intro_text4, (WIDTH//2 - intro_text4.get_width()//2, HEIGHT//2 + 10))
-        window.blit(intro_text5, (WIDTH//2 - intro_text5.get_width()//2, HEIGHT//2 + 60))
-    elif state == PLAYING:
-        all_sprites.draw(window)
-        # Display 'Education', score, and lives
-        title_text = font.render("Education", True, RETRO_BLUE)
-        window.blit(title_text, (10, 10))
-        score_text = small_font.render(f"Score: {score}", True, WHITE)
-        lives_text = small_font.render(f"Lives: {lives}", True, WHITE)
-        window.blit(score_text, (WIDTH - 150, 10))
-        window.blit(lives_text, (WIDTH - 150, 40))
-    elif state == QUESTION:
-        # Display the question and input field
-        question_text = font.render(current_question['question'], True, RETRO_GREEN)
-        input_box = font.render(input_text, True, RETRO_YELLOW)
-        window.blit(question_text, (WIDTH//2 - question_text.get_width()//2, HEIGHT//2 - 50))
-        window.blit(input_box, (WIDTH//2 - input_box.get_width()//2, HEIGHT//2))
-    elif state == GAME_OVER:
-        # Display Game Over screen
-        if lives <= 0:
-            game_over_text = font.render("Game Over!", True, RETRO_RED)
-        else:
-            game_over_text = font.render("You Win!", True, RETRO_GREEN)
-        final_score_text = small_font.render(f"Final Score: {score}", True, WHITE)
-        restart_text = small_font.render("Press SPACE to restart.", True, RETRO_YELLOW)
-        window.blit(game_over_text, (WIDTH//2 - game_over_text.get_width()//2, HEIGHT//2 - 50))
-        window.blit(final_score_text, (WIDTH//2 - final_score_text.get_width()//2, HEIGHT//2))
-        window.blit(restart_text, (WIDTH//2 - restart_text.get_width()//2, HEIGHT//2 + 50))
-
-    pygame.display.flip()
-
-pygame.quit()
-sys.exit()
+    <div class="footer">
+        <p>&copy; 2023 UNESCO Competency Framework Guide. All rights reserved.</p>
+    </div>
+</body>
+</html>
